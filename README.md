@@ -72,6 +72,19 @@ Just `include` any of these in your manifest.
 
 These settings can be used like one-shots or customized.
 
+`osx::global::boot_chime_volume` - the volume (in percent) of the boot chime
+startup sound
+
+```puppet
+# Set the default value (00)
+include osx::global::boot_chime_volume
+
+# ... or set your own
+class { 'osx::global::boot_chime_volume':
+  ensure => 20
+}
+```
+
 `osx::global::key_repeat_delay` - the amount of time (in ms) before a key starts
   repeating
 
